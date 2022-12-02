@@ -92,7 +92,7 @@ export default function Navbar() {
                 alt=""
               />
             </a>
-            <a href="#" className="whitespace-nowrap text-base font-medium text-white">CRBN</a>
+            <a href="#" className="font-semibold text-lg whitespace-nowrap text-white">CRBN</a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg- p-2 text-gray-400 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
