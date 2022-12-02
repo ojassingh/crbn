@@ -16,6 +16,8 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
+    "flowbite": "^1.5.4",
+    "flowbite-react": "^0.3.5",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
