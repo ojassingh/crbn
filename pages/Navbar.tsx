@@ -80,7 +80,7 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-    <Popover className="relative bg-navBarBg">
+    <Popover className="position-fixed bg-navBarBg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
