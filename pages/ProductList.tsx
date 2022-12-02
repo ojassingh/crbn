@@ -10,7 +10,7 @@ export default function ProductList() {
           <p className="font-bold text-black p-0 text-3xl w-1/2">
             Trending products
           </p>
-          <a className="font-bold text-indigo-500 p-0 text-lg">
+          <a href="#" className="font-bold text-navBarBg p-0 text-lg">
             Shop the collection
           </a>
         </div>

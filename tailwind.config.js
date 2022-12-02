@@ -11,6 +11,9 @@ module.exports = {
         "navBarBg": "#003381",
         "navBarBtnBg": "#00BFBF",
         "navBarBtnBgHover": "#33CDCD"
+      },
+      height: {
+        "storeImg": "35rem"
       }
 
     },
