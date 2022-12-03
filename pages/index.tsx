@@ -3,8 +3,20 @@ import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import StoreFront from '../components/StoreFront'
+import useSWR from 'swr'
+import axios from 'axios'
+
+const fetcher = (url: string) => axios.get(url).then(res => res.data)
 
 export default function Home() {
+
+  const { data, error } = useSWR('/api/posts', fetcher)
+  if (error) return <div>An error occured.</div>
+  if (!data) return <div>Loading ...</div>
+
+  console.log(data)
+
+  
   return (
     <>
       <Navbar />
