@@ -23,12 +23,6 @@ export default function ProductList() {
           <ProductCard />
           <ProductCard />
         </div>
-        <div className="flex justify-between">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
       </div>
     </div>
     
