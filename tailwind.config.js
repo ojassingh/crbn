@@ -14,6 +14,9 @@ module.exports = {
       },
       height: {
         "storeImg": "35rem"
+      },
+      width: {
+        "previewSm": "22%"
       }
 
     },
