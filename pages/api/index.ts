@@ -4,10 +4,8 @@ const prisma = new PrismaClient()
 
 async function main() {
   // our Prisma Client queries go here
-  async function main() {
-    const allUsers = await prisma.usercrbn.findMany()
-    console.log(allUsers)
-  }
+  const allUsers = await prisma.usercrbn.findMany()
+  console.log(allUsers)
 }
 
 main()
