@@ -11,7 +11,7 @@ export default function Home() {
       <LandingPage />
       <ProductList />
       <br className = "h-10"/>
-      <hr className = "mx-10"/>
+      <hr className = "mx-20"/>
       <ProductPreview />
     </>
   )

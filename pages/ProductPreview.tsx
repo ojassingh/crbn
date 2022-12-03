@@ -70,7 +70,7 @@ export default function ProductPreview() {
           </ul>
         </div>
       </div>
-      <hr className="py-3" />
+      <hr className="py-3 mx-20" />
     </>
   )
 }
