@@ -1,8 +1,8 @@
-import LandingPage from './LandingPage'
-import Navbar from './Navbar'
-import ProductList from './ProductList'
-import ProductPreview from './ProductPreview'
-import StoreFront from './StoreFront'
+import LandingPage from '../components/LandingPage'
+import Navbar from '../components/Navbar'
+import ProductList from '../components/ProductList'
+import ProductPreview from '../components/ProductPreview'
+import StoreFront from '../components/StoreFront'
 
 export default function Home() {
   return (
