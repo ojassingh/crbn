@@ -43,7 +43,7 @@ export default function ProductPreview() {
           </p>
           <a
             href="#"
-            className="flex w-1/2 my-10 first-line:items-center justify-center rounded-md border border-transparent bg-navBarBg px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            className="flex md:w-1/2 my-10 first-line:items-center justify-center rounded-md border border-transparent bg-navBarBg px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
           >
             Purchase
           </a>
