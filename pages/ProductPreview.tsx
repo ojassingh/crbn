@@ -6,13 +6,13 @@ import StoreFront from './StoreFront'
 export default function ProductPreview() {
   return (
     <>
-      <div className="flex px-10 justify-between">
-        <div className="w-1/2 items-center p-10 space-y-5">
+      <div className="lg:flex md:flex lg:px-10 md:px-10 sm:5 justify-between">
+        <div className="lg:w-1/2 md:w-1/2 items-center p-10 space-y-5">
           <img
             className="rounded"
             src="https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg"
           />
-          <div className="flex justify-between items-center space-x-5">
+          <div className="flex justify-between items-center">
             <img
               className="w-previewSm rounded"
               src="https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg"
@@ -31,7 +31,7 @@ export default function ProductPreview() {
             />
           </div>
         </div>
-        <div className="w-1/2 pr-10">
+        <div className="lg:w-1/2 md:w-1/2 md:pr-10 sm:px-5">
           <p className="font-bold text-4xl mt-10">Pen</p>
           <p className="font-light text-4xl my-3">$75</p>
           <p className="font-light text-gray-600 text-xl my-3">
