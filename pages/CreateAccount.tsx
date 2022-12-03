@@ -5,17 +5,32 @@ import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import StoreFront from '../components/StoreFront'
 
-export default function SignInPage() {
+export default function CreateAccount() {
   return (
     <>
       <div className="flex h-full">
-        <div className="w-1/2 h-screen pt-20">
-          <div className="p-20 space-y-5 align-middle m-auto">
+        <div className="w-1/2 h-screen">
+          <div className="px-20 py-10 space-y-5">
             <a href="#" className="whitespace-nowrap text-5xl font-mono font-bold text-black hover:text-gray-900">
                   CRBN</a>
-            <p className="text-3xl font-bold pt-5">Sign into your Account</p>
+            <p className="text-3xl font-bold pt-5">Create an Account</p>
               <div className="text-gray-600 space-y-5 font-semibold">
-              <p>Sign in with</p>
+              <p>First Name</p>
+              <textarea
+                id="about"
+                name="about"
+                rows={1}
+                className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="you@example.com"
+              />
+              <p>Last Name</p>
+              <textarea
+                id="about"
+                name="about"
+                rows={1}
+                className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="you@example.com"
+              />
               <p>Email Address</p>
               <textarea
                 id="about"
@@ -32,15 +47,14 @@ export default function SignInPage() {
                 className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="********"
               />
-              </div>
-              <div className="flex justify-between">
-                <div className="flex space-x-2">
-                  <Checkbox className="mt-1" />
-                  <p>Remember me</p>
-                </div>
-                <a href="#" className="text-navBarBg">
-                  Forgot your password?
-                </a>
+              <p>Confirm Password</p>
+              <textarea
+                id="about"
+                name="about"
+                rows={1}
+                className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="********"
+              />
               </div>
               <a
                 href="#"
