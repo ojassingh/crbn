@@ -18,6 +18,17 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Prisma:
+ - This [site](https://vercel.com/guides/nextjs-prisma-postgres#step-2:-set-up-prisma-and-connect-your-postgresql-database) was used for Prisma + PostgreSQL Setup 
+    - To actually create the tables in your database, you now can use the following command of the Prisma CLI: ```npx prisma db push```
+    - Run prisma Data Browser from terminal with ```npx prisma studio```
+    - :heavy_check_mark: Generated Prisma Client (4.7.1 | library) to .\node_modules\@prisma\client in 64ms
+You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client       
+```
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
