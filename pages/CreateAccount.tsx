@@ -4,8 +4,20 @@ import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import StoreFront from './StoreFront'
+import { useState } from 'react'
 
 export default function CreateAccount() {
+
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirm] = useState('');
+
+  function clickHandler(){
+    
+  }
+
   return (
     <>
       <div className="flex h-full">
@@ -17,6 +29,10 @@ export default function CreateAccount() {
               <div className="text-gray-600 space-y-5 font-semibold">
               <p>First Name</p>
               <textarea
+                value={name}
+                onChange={(e)=>{
+                  setName(e.target.value)
+                }}
                 id="about"
                 name="about"
                 rows={1}
@@ -25,6 +41,10 @@ export default function CreateAccount() {
               />
               <p>Last Name</p>
               <textarea
+                value={lastName}
+                onChange={(e)=>{
+                  setLastName(e.target.value)
+                }}
                 id="about"
                 name="about"
                 rows={1}
@@ -33,6 +53,10 @@ export default function CreateAccount() {
               />
               <p>Email Address</p>
               <textarea
+                value={email}
+                onChange={(e)=>{
+                  setEmail(e.target.value)
+                }}
                 id="about"
                 name="about"
                 rows={1}
@@ -40,28 +64,37 @@ export default function CreateAccount() {
                 placeholder="you@example.com"
               />
               <p>Password</p>
-              <textarea
-                id="about"
+              <input
+              value={password}
+              onChange={(e)=>{
+                setPassword(e.target.value)
+              }}
+                id="password"
                 name="about"
-                rows={1}
+                type='password'
                 className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="********"
               />
+              {password!=confirmPassword && <p className='text-red-500 text-sm'>Passwords don't match!</p>}
               <p>Confirm Password</p>
-              <textarea
-                id="about"
+              <input
+                value={confirmPassword}
+                onChange={(e)=>{
+                  setConfirm(e.target.value)
+                }}
+                id="confirmpassword"
                 name="about"
-                rows={1}
+                type="password"
                 className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="********"
               />
               </div>
-              <a
-                href="#"
+              <button
+                onClick={clickHandler}
                 className="flex md:w-full my-10 first-line:items-center justify-center rounded-md border border-transparent bg-navBarBg px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
               >
                 Sign in
-              </a>
+              </button>
             </div>
         </div>
         <div className="w-1/2 h-screen fixed right-0">
