@@ -9,6 +9,5 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const allPosts = await prisma.post.findMany()
-  console.log(allPosts)
   res.status(200).json(allPosts)
 }

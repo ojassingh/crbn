@@ -10,21 +10,38 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Post {
-  id        String     @default(cuid()) @id
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    Usercrbn?   @relation(fields: [authorId], references: [id])
-  authorId  String?
-}
-
-model Usercrbn {
-  id            String       @default(cuid()) @id
+model User { 
+  id            Int       @default(autoincrement()) @id
   name          String?
   email         String?   @unique
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
-  @@map(name: "users")
 }
+
+model Store {
+  id            Int       @id @default(autoincrement())
+  name          String
+  about         String
+  ownerId       Int
+}
+
+model Product {
+  id            Int       @id @default(autoincrement())
+  name          String
+  price         Float     @default(0)
+  storeId       Int       @default(0)
+}
+
+model ProductImage {
+  id            Int       @id @default(autoincrement())
+  alt           String
+  main          Boolean
+  url           String
+  productId     Int
+}
+
+model Sustainability {
+  id            Int       @id @default(autoincrement())
+  //We need a criteria here
+}
+

@@ -2,7 +2,6 @@ import LandingPage from '../components/LandingPage'
 import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
-import StoreFront from '../components/StoreFront'
 import useSWR from 'swr'
 import axios from 'axios'
 
