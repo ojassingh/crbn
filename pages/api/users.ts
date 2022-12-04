@@ -7,7 +7,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const allUsers = await prisma.usercrbn.findMany()
+  const allUsers = await prisma.product.findMany()
   console.log(allUsers)
   res.status(200).json(allUsers)
 }
