@@ -4,6 +4,7 @@ import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import useSWR from 'swr'
 import axios from 'axios'
+import StoreFront from './StoreFront'
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data)
 

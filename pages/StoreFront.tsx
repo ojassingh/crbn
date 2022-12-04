@@ -1,6 +1,6 @@
 
-import Navbar from './Navbar'
-import ProductList from './ProductList'
+import Navbar from '../components/Navbar'
+import ProductList from '../components/ProductList'
 
 export default function StoreFront() {
   return (

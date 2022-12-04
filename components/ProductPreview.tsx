@@ -1,7 +1,7 @@
 import LandingPage from './LandingPage'
 import Navbar from './Navbar'
 import ProductList from './ProductList'
-import StoreFront from './StoreFront'
+import StoreFront from '../pages/StoreFront'
 
 export default function ProductPreview() {
   return (
