@@ -4,15 +4,11 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-type Data = {
-  name: string
-}
-
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse
 ) {
-  const allPosts = prisma.post.findMany()
+  const allPosts = await prisma.post.findMany()
   console.log(allPosts)
   res.status(200).json(allPosts)
 }
