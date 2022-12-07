@@ -8,6 +8,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const allUsers = await prisma.user.findMany()
+  const allUsers = await prisma.user.findFirstOrThrow()
   res.status(200).json(allUsers)
 }
