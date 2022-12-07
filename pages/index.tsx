@@ -9,9 +9,6 @@ export default function Home() {
   // const { data, error } = useSWR('/api/products', fetcher)
   // if (error) return <div>An error occured.</div>
   // if (!data) return <div>Loading ...</div>
-
-  // console.log(data)
-
   
 
   return (
