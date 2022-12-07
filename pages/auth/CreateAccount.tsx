@@ -1,10 +1,11 @@
 import { Checkbox } from 'flowbite-react'
-import LandingPage from '../components/LandingPage'
-import Navbar from '../components/Navbar'
-import ProductList from '../components/ProductList'
-import ProductPreview from '../components/ProductPreview'
-import StoreFront from './StoreFront'
+import LandingPage from '../../components/LandingPage'
+import Navbar from '../../components/Navbar'
+import ProductList from '../../components/ProductList'
+import ProductPreview from '../../components/ProductPreview'
+import StoreFront from '../StoreFront'
 import { useState } from 'react'
+import { signIn } from 'next-auth/react'
 
 export default function CreateAccount() {
 
@@ -15,7 +16,7 @@ export default function CreateAccount() {
   const [confirmPassword, setConfirm] = useState('');
 
   function clickHandler(){
-    
+    signIn();
   }
 
   return (

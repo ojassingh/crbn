@@ -1,11 +1,27 @@
 import { Checkbox } from 'flowbite-react'
-import LandingPage from '../components/LandingPage'
-import Navbar from '../components/Navbar'
-import ProductList from '../components/ProductList'
-import ProductPreview from '../components/ProductPreview'
-import StoreFront from './StoreFront'
+import { FormEventHandler, useState } from 'react'
+import { signIn } from 'next-auth/react'
+import LandingPage from '../../components/LandingPage'
+import Navbar from '../../components/Navbar'
+import ProductList from '../../components/ProductList'
+import ProductPreview from '../../components/ProductPreview'
+import StoreFront from '../StoreFront'
 
-export default function SignInPage() {
+const SignInPage = () => {
+  const [userInfo, setUserInfo] = useState({email: '', password: ''});
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+    // validate userinfo
+    event.preventDefault();
+
+    const res = await signIn("credentials", {
+      email: userInfo.email,
+      password: userInfo.password,
+      redirect: false,
+    });
+
+    console.log(res);
+  };
+
   return (
     <>
       <div className="flex h-full">
@@ -42,12 +58,15 @@ export default function SignInPage() {
                   Forgot your password?
                 </a>
               </div>
-              <a
-                href="#"
-                className="flex md:w-full my-10 first-line:items-center justify-center rounded-md border border-transparent bg-navBarBg px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-              >
-                Sign in
-              </a>
+              <form onSubmit={handleSubmit}>
+                {/* need to input values here or where the Sign In button is, will do next time */}
+                <a
+                  href="#"
+                  className="flex md:w-full my-10 first-line:items-center justify-center rounded-md border border-transparent bg-navBarBg px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                >
+                  Sign in
+                </a>
+              </form>
             </div>
         </div>
         <div className="w-1/2 h-screen fixed right-0">
@@ -59,5 +78,7 @@ export default function SignInPage() {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
+
+export default SignInPage;
