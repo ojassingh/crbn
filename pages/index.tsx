@@ -2,11 +2,12 @@ import LandingPage from '../components/LandingPage'
 import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
+import NavbarLandingPage from '../components/NavbarLandingPage'
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavbarLandingPage />
       <LandingPage />
       <ProductList />
       <br className = "h-10"/>
