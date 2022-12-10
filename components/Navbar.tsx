@@ -60,7 +60,7 @@ export default function Navbar() {
                 />
               </svg>
             </a>
-            <a className="text-center space-y-1" href="">
+            <a className="text-center space-y-1" href="../ProfilePage">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
