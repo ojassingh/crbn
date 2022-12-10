@@ -18,7 +18,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export default function Navbar() {
   return (
-    <Popover className="position-fixed bg-white">
+    <Popover className="fixed z-10 w-full bg-white">
       <div className="mx-auto max-w-full px-20 sm:px-20">
         <div className="flex items-center justify-between py-6 md:justify-between md:space-x-20">
           <a
