@@ -31,7 +31,7 @@ export default function ImpactDonut(props: any) {
             //var fontSize = (height / 100).toFixed(2)
             ctx.font = "bold 25px sans-serif";
             ctx.textBaseline = 'top'
-            ctx.fillStyle = 'black'
+            ctx.fillStyle = color
             var text = value,
               textX = Math.round((width - ctx.measureText(text).width)/2),
               textY = height /2 - 10
