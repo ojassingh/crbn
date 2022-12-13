@@ -3,14 +3,26 @@ import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import MyDetailsForm from '../components/MyDetailsForm'
+import { useState } from 'react'
+import MyImpact from '../components/MyImpact'
+import MyOrders from '../components/MyOrders'
 
 export default function ProfilePage() {
+
+  /*
+  0 - My details
+  1 - My impact
+  2 - My orders
+  */
+  const [page, setPage] = useState(0);
+  console.log('page', page);
+
   return (
-    <>
+    <div className="bg-navBarBg">
       <Navbar />
-      <div className="flex z-0 absolute mt-20 justify-end bg-navBarBg">
-        <div className="w-3/12 fixed left-0 pl-20 divide-y-2 divide-white pr-7 pt-20 text-white font-bold">
-          <a className="flex justify-between py-4" href="#">
+      <div className="flex z-0 min-h-screen h-auto absolute mt-20 justify-end bg-navBarBg">
+        <div className="w-3/12 fixed bg-navBarBg left-0 pl-20 divide-y-2 divide-white pr-7 pt-20 text-white font-bold">
+          <a className="flex justify-between py-4 hover:text-lg" onClick={() => setPage(0)}>
             <p>My details</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +39,7 @@ export default function ProfilePage() {
               />
             </svg>
           </a>
-          <a className="flex justify-between py-4">
+          <a className="flex justify-between py-4 hover:text-lg" onClick={() => setPage(1)}>
             <p>My impact</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +56,7 @@ export default function ProfilePage() {
               />
             </svg>
           </a>
-          <a className="flex justify-between py-4">
+          <a className="flex justify-between py-4 hover:text-lg" onClick={() => setPage(3)}>
             <p>My orders</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,10 +74,15 @@ export default function ProfilePage() {
             </svg>
           </a>
         </div>
-        <div className="w-9/12 space-y-10 pl-10 mt-10 rounded pr-20 pt-10 bg-white">
-          <MyDetailsForm />
+        <div className="w-9/12 right-0 space-y-10 pl-10 mt-10 ml-96 rounded pr-20 pt-10 bg-white border-black">
+          {
+            page == 0 ? <MyDetailsForm /> 
+            : page == 1 ? <MyImpact />:
+            <MyOrders />
+          }
+          
         </div>
       </div>
-    </>
+    </div>
   )
 }

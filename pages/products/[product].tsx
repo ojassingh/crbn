@@ -1,5 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import Navbar from "../../components/Navbar";
+import ProductPreview from "../../components/ProductPreview";
 
 const product: NextPage<any>= (props) => {
 
@@ -9,8 +11,12 @@ const product: NextPage<any>= (props) => {
         </Head>
 
         <main className="">
-            <div id="content" className="p-20">
-                <h1 className="text-6xl font-semibold">Product</h1>
+            <div id="content" className="p-0">
+                <Navbar />
+
+                <div className="pt-32">
+                    <ProductPreview />
+                </div>
             </div>
         </main>
 
