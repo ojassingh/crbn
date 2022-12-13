@@ -116,31 +116,93 @@ export default function MyDetailsForm(this: any) {
       </div>
       <div className="space-y-5 pb-10">
         <hr />
+        <div className="flex space-x-3">
         <p className="font-bold text-xl">Contact Information</p>
+        {!editCI && (
+          <a
+            className="text-xl text-gray-400 hover:text-gray-600"
+            onClick={() => {
+              setEditCI(!editCI)
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+              />
+            </svg>
+          </a>
+        )}
+      </div>
+
         <p className="font-bold">Phone Number</p>
-        <textarea
-          id="about"
-          name="about"
-          rows={1}
-          className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="First name"
-        />
+        {editCI ? (
+            <textarea
+              id="about"
+              name="about"
+              rows={1}
+              className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              placeholder="First Name"
+              defaultValue={phoneNumber}
+            />
+          ) : (
+            <p className="text-gray-600">{phoneNumber}</p>
+          )}
         <p className="font-bold">Email</p>
-        <textarea
-          id="about"
-          name="about"
-          rows={1}
-          className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="First name"
-        />
+        {editCI ? (
+            <textarea
+              id="about"
+              name="about"
+              rows={1}
+              className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              placeholder="First Name"
+              defaultValue={email}
+            />
+          ) : (
+            <p className="text-gray-600">{email}</p>
+          )}
         <p className="font-bold">Address</p>
-        <textarea
-          id="about"
-          name="about"
-          rows={1}
-          className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="First name"
-        />
+        {editCI ? (
+            <textarea
+              id="about"
+              name="about"
+              rows={1}
+              className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              placeholder="First Name"
+              defaultValue={address}
+            />
+          ) : (
+            <p className="text-gray-600">{address}</p>
+          )}
+        {editCI && (
+            <div className="flex space-x-5">
+              <a
+                className="text-md text-gray-400 hover:text-gray-600"
+                onClick={() => {
+                  setEditCI(!editCI)
+                }}
+              >
+                SAVE
+              </a>
+              <a
+                className="text-md text-gray-400 hover:text-gray-600"
+                onClick={() => {
+                  setEditCI(!editCI)
+                }}
+              >
+                DISCARD
+              </a>
+              
+            </div>
+          )}
       </div>
     </>
   )
