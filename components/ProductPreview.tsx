@@ -4,6 +4,7 @@ export default function ProductPreview() {
 
   const name = 'Pen'
   const price = 64
+  const store = `Frank's pens`
   const description = `A statement that tells you how something or someone looks, sounds,
           etc. : words that describe something or someone. [count] Reporters
           called the scene “a disaster area,” and I think that was an accurate
@@ -54,6 +55,7 @@ export default function ProductPreview() {
         <div className="lg:w-1/2 md:w-1/2 md:pr-10 sm:px-5">
           <p className="font-bold text-4xl mt-10">{name}</p>
           <p className="font-light text-4xl my-3">${price}</p>
+          <a className="font-light text-sm text-gray-600 my-3" href="../StoreFront">by {store}</a>
           <p className="font-light text-gray-600 text-xl my-3">{description}</p>
           <a
             href="#"
@@ -77,13 +79,7 @@ export default function ProductPreview() {
               <ImpactDonut impact={impact.animal}/>
                 <p> Animal safety </p>
               </div>
-              {/* <img src="https://redconfidential.files.wordpress.com/2022/05/untitled-002.png?w=1000" /> */}
             </div>
-            {/* <div className="flex justify-between text-center px-8 mb-11 text-base font-medium">
-              <p> Food security </p>
-              <p> Water security </p>
-              <p> Forest security </p>
-            </div> */}
           </div>
           <hr className="py-3" />
           <p className="font-medium text-xl mb-3 text-navBarBg">Features</p>
