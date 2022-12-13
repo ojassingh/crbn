@@ -9,7 +9,6 @@ export default function ImpactDonut(props: any) {
     const doughnutOptions = {
         cutout: 48,
       }
-      console.log(props)
     
       const data = {
         datasets: [
