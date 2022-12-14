@@ -15,8 +15,12 @@ export default function LandingPage() {
             Buy from small businesses that care about the environment
           </p>
           <div className="flex justify-between md:justify-right md:space-x-5 bg-navBarBg">
-          <input className="h-11 shadow appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text" type="text" 
-          placeholder="Enter your email address" />
+            <input
+              className="h-11 shadow appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="text"
+              type="text"
+              placeholder="Enter your email address"
+            />
 
             <a
               href="#"
@@ -43,6 +47,50 @@ export default function LandingPage() {
           alt="..."
         />
       </div>
+      <div className="flex bg-blue-50 justify-between">
+        <div className="w-1/2 mt-20 drop-shadow-xl">
+          <img className="rounded-lg" src='/landingpage_2.PNG' alt='screenshot'/>
+        </div>
+        <div className="w-1/2 p-20 text-black">
+          <p className="font-semibold py-10 text-4xl">
+          DISCOVER WHY SMALL ECO- FRIENDLY BUSINESSES ARE USING CRBN FOR
+            ECOMMERCE
+          </p>
+          <a className="font-medium space-y-10">
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Reach target customers who are just as eco-friendly as you
+            </p>
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Free product recyclability checks
+            </p>
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Get verified as the sustainable business you are within days!
+            </p>
+          </a>
+        </div>
+      </div>
+      <div className="flex bg-blue-50 pt-10 justify-between">
+        <div className="w-1/2 p-20 pt-0">
+          <p className="font-semibold py-10 text-4xl">
+          EVERYTHING YOU NEED TO BECOME A SUSTAINABLE SHOPPER
+          </p>
+          <a className="font-medium space-y-10">
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Reach target customers who are just as eco-friendly as you
+            </p>
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Free product recyclability checks
+            </p>
+            <p className="font-light text-2xl text-gray-600 border-l-gray-600 border-l-2 pl-10">
+              Get verified as the sustainable business you are within days!
+            </p>
+          </a>
+        </div>
+        <div className="w-1/2 mt-0 drop-shadow-xl">
+          <img className="rounded-lg" src='/landingpage_1.PNG' alt='screenshot'/>
+        </div>
+      </div>
+      
     </>
   )
 }
