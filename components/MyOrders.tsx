@@ -1,42 +1,66 @@
 export default function MyOrders() {
+  const orders = [
+    {
+      date: 'May 2, 2022',
+      productId: 1023,
+      name: 'Pen',
+      price: 75,
+      img: 'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
+      store: `Frank's pens`,
+    },
+    {
+      date: 'May 2, 2022',
+      productId: 1023,
+      name: 'Pen',
+      price: 75,
+      img: 'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
+      store: `Frank's pens`,
+    },
+    {
+      date: 'May 2, 2022',
+      productId: 1023,
+      name: 'Pen',
+      price: 75,
+      img: 'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
+      store: `Frank's pens`,
+    },
+    {
+      date: 'May 2, 2022',
+      productId: 1023,
+      name: 'Pen',
+      price: 75,
+      img: 'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
+      store: `Frank's pens`,
+    },
+  ]
+
   return (
     <div className="w-full space-y-5">
-      <p className="font-bold text-3xl w-[65vw]">My Impact</p>
+      <p className="font-bold text-3xl w-[65vw]">My Orders</p>
       <hr />
-      <p className="font-bold text-xl">Forestry</p>
-      <div className="flex justify-between">
-        <div className="w-full space-y-5">
-          <p className="font-bold">First Name</p>
-          <textarea
-            id="about"
-            name="about"
-            rows={1}
-            className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            placeholder="Last Name"
-          />
-          <p className="font-bold">Last Name</p>
-          <textarea
-            id="about"
-            name="about"
-            rows={1}
-            className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            placeholder="First name"
-          />
-          <p className="font-bold">Birth Date</p>
-          <textarea
-            id="about"
-            name="about"
-            rows={1}
-            className="py-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            placeholder="First name"
-          />
-        </div>
-        <div className="w-1/3">
-          <p className="object-cover w-full p-10 rounded-full font-bold text-center">Edit photo</p>
-        </div>
-      </div>
-      <div className="space-y-5 pb-10">
-        <hr />
+      <div>
+        {orders.map((o) => {
+          return (
+            <div className="flex py-3 justify-between">
+              <div className="flex space-x-10 justify-between">
+                <img className="w-32 h-32" src={o.img} />
+                <div>
+                  <p className="font-bold">{o.name}</p>
+                  <p className="font-medium">${o.price}</p>
+                  <a
+                  href="../StoreFront"
+                  className="text-gray-600 hover:text-gray-800">By {o.store}</a>
+                  <p className="text-gray-500">Ordered {o.date}</p>
+
+                </div>
+              </div>
+              <div className="flex space-x-10 pt-10 justify-between font-bold text-navBarBg">
+                <a href="../products/1">View Product</a>
+                <a>Buy Again</a>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
