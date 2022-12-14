@@ -7,12 +7,12 @@ export default function LandingPage() {
         <div className="flex-col justify-between pl-20">
           <div className="pt-20 pb-10 w-full">
             <p className="font-extrabold text-white p-0 text-6xl">
-              Some sort of Slogan to represent us
+              Fight climate change with online shopping
             </p>
           </div>
 
           <p className="font-medium text-white pb-10 text-sm">
-            Smaller thing over here
+            Buy from small businesses that care about the environment
           </p>
           <div className="flex justify-between md:justify-right md:space-x-5 bg-navBarBg">
           <input className="h-11 shadow appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text" type="text" 
@@ -34,7 +34,7 @@ export default function LandingPage() {
             </a>
           </div>
           <p className="font-medium text-white pb-20 text-xs">
-            Smaller thing over here
+            Subscribe to our newsletter
           </p>
         </div>
         <img
