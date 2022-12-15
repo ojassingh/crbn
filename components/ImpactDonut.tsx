@@ -2,12 +2,11 @@ import { Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
 
 export default function ImpactDonut(props: any) {
-    const color = props.impact.color;
-    const value = props.impact.value
+    const { color, value, width } = props.impact;
     ChartJS.register(ArcElement, Tooltip)
 
     const doughnutOptions = {
-        cutout: 48,
+        cutout: width ? width: 48,
       }
     
       const data = {

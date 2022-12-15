@@ -13,14 +13,15 @@ module.exports = {
         "navBarBtnBgHover": "#33CDCD"
       },
       height: {
-        "storeImg": "35rem"
+        "storeImg": "35rem",
+        "dashboard": "29rem"
       },
       width: {
         "previewSm": "22%"
       },
       maxHeight: {
         "storeImg": "35rem"
-      }
+      },
 
     },
   },
