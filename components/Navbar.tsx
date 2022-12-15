@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-full px-20 sm:px-20">
         <div className="flex items-center justify-between py-6 md:justify-between md:space-x-20">
           <a
-            href="../"
+            href="../Home"
             className="whitespace-nowrap text-4xl pl-2 font-mono font-bold text-black hover:text-gray-900"
           >
             CRBN
