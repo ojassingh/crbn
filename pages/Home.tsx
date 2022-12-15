@@ -24,6 +24,14 @@ export default function Home() {
   ]
   const discoverInitiatives = [
     {
+      img: 'https://www.realsimple.com/thmb/Chym1xbfD2FjCS_AC00ASX-HQgA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/full-recycle-bin-ea6d101e3d4b4204a6f4f85d8c6e5821.jpg',
+      name: 'Recycle Initiative',
+    },
+    {
+      img: 'https://assets.taraenergy.com/wp-content/uploads/2020/11/forms-of-wind-energy-pros-and-cons-image.jpg',
+      name: 'Wind Energy Initiative',
+    },
+    {
       img: 'https://images.pexels.com/photos/1076758/pexels-photo-1076758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       name: 'Ocean Cleaners',
     },
@@ -34,15 +42,7 @@ export default function Home() {
     {
       img: 'https://assets.justenergy.com/wp-content/uploads/2018/10/Solar-1.jpg',
       name: 'Solar Energy Initiative',
-    },
-    {
-      img: 'https://www.realsimple.com/thmb/Chym1xbfD2FjCS_AC00ASX-HQgA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/full-recycle-bin-ea6d101e3d4b4204a6f4f85d8c6e5821.jpg',
-      name: 'Recycle Initiative',
-    },
-    {
-      img: 'https://assets.taraenergy.com/wp-content/uploads/2020/11/forms-of-wind-energy-pros-and-cons-image.jpg',
-      name: 'Wind Energy Initiative',
-    },
+    }
   ]
   const productsYouMayLike = [
     {
@@ -66,17 +66,17 @@ export default function Home() {
   const stats = {
     recycle: {
       color: 'rgb(200 30 30)',
-      value: 64,
+      value: 50,
       width: 70,
     },
     emissions: {
       color: 'rgb(26 86 219)',
-      value: 43,
+      value: 89,
       width: 70,
     },
     social: {
       color: 'rgb(4 108 78)',
-      value: 23,
+      value: 68,
       width: 70,
     }
   }
@@ -86,11 +86,12 @@ export default function Home() {
       <Navbar />
       <br className="h-32" />
       <hr className="mx-20 " />
-      <img className='w-screen object-cover h-storeImg' src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
-      <div className="flex justify-between px-20 py-10 my-10 text-navBarBg font-extrabold">
+      <img className='w-screen object-cover h-dashboard' src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+      
+      <div className="flex justify-between px-20 py-20 text-navBarBg font-extrabold">
         <div>
           <p className="text-4xl pt-20">Welcome back Maaneth,</p>
-          <p className="text-xl pt-5">Your impact</p>
+          <p className="text-xl pt-5">Your impact distribution</p>
         </div>
         <div className="flex space-x-10">
           <div className="h-48 text-center">
@@ -135,7 +136,7 @@ export default function Home() {
             Discover new initiatives
           </p>
           <a href="#" className="font-bold text-navBarBg p-0 text-lg">
-            See more
+            See all
           </a>
         </div>
       </div>
@@ -146,7 +147,7 @@ export default function Home() {
             Trending products
           </p>
           <a href="#" className="font-bold text-navBarBg p-0 text-lg">
-            See more
+            See all
           </a>
         </div>
       </div>

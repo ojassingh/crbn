@@ -9,10 +9,8 @@ export default function Home() {
     <>
       <NavbarLandingPage />
       <LandingPage />
-      <ProductList />
       <br className = "h-10"/>
       <hr className = "mx-20"/>
-      <ProductPreview />
     </>
   )
 }

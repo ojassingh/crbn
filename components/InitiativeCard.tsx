@@ -7,7 +7,7 @@ export default function InitiativeCard (props: any) {
             src={img}
           />
           <div className="flex justify-center px-5">
-            <p className="font-semibold pt-10">{name}</p>
+            <p className="font-semibold pt-5">{name}</p>
           </div>
         </a>
     )
