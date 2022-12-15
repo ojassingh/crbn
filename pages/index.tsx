@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import ProductPreview from '../components/ProductPreview'
 import NavbarLandingPage from '../components/NavbarLandingPage'
-
+//fixed issue
 export default function Home() {
   return (
     <>
