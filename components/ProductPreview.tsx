@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import ImpactDonut from './ImpactDonut'
 
 export default function ProductPreview() {
@@ -10,13 +11,12 @@ export default function ProductPreview() {
           called the scene “a disaster area,” and I think that was an accurate
           description. I applied for the position after reading the job
           description.`
-  const mainImage =
-    'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg'
+  const [mainImage, setMainImage] = useState('https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg')
   const otherPhotos = [
     'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
-    'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
-    'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
-    'https://www.montblanc.com/variants/images/34480784411799068/A/w747.jpg',
+    'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1673&q=80',
+    'https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    'https://images.unsplash.com/photo-1617177435596-1c9e30d6d608?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
   ]
   const features = [
     'Cleans 1lb of trash from Ocean',
@@ -44,11 +44,11 @@ export default function ProductPreview() {
   return (
     <>
       <div className="lg:flex md:flex lg:px-10 md:px-10 sm:5 justify-between">
-        <div className="lg:w-1/2 md:w-1/2 items-center p-10 space-y-5">
-          <img className="rounded" src={mainImage} />
-          <div className="flex justify-between items-center">
+        <div className="lg:w-1/2 md:w-1/2 justify-center items-center p-10 space-y-8">
+          <img className="rounded w-full max-h-storeImg object-cover" src={mainImage} />
+          <div className="flex justify-between space-x-5 items-contain">
             {otherPhotos.map((p) => {
-              return <img className="w-previewSm rounded" src={p} />
+              return <img onClick={() => setMainImage(p)} className="w-32 h-32 rounded object-cover" src={p} />
             })}
           </div>
         </div>
